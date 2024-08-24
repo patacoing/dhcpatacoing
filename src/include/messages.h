@@ -3,6 +3,9 @@
 
 #include <netinet/in.h>
 
+#define DHCP_SERVER_PORT 67
+#define DHCP_CLIENT_PORT 68
+
 #define DHCP_REQUEST 1
 #define DHCP_REPLY 2
 

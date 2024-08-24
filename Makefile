@@ -9,6 +9,8 @@ OBJECTS_FILES=mac_address.o sockets.o discover.o messages.o
 OBJS=$(addprefix $(OBJECTS)/, $(OBJECTS_FILES))
 
 all: $(BIN)/main
+debug: CFLAGS += -g -DDEBUG
+debug: all
 
 $(BIN)/main: $(SRC)/main.c $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
